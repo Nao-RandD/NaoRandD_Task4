@@ -14,13 +14,15 @@ class ViewController: UIViewController {
 
 	@IBAction private func tappedCountButton(_ sender: Any) {
 		counter += 1
-		countLabel.text = String(counter)
+        updateCountLabel()
 	}
 
 	@IBAction private func tappedClearButton(_ sender: Any) {
 		counter = 0
-		countLabel.text = String(counter)
+        updateCountLabel()
 	}
 
+    private func updateCountLabel() {
+        countLabel.text = String(counter)
+    }
 }
-
